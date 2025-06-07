@@ -87,10 +87,7 @@
   }
 
   /* Simple font-family utility for zentry font */
-  .font-zentry {
-    font-family: var(--font-zentry);
-  }
-
+  
   /* Keep special-font as a pure CSS class (no @apply!) */
   .special-font {
     font-family: var(--font-zentry);
