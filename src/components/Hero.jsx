@@ -63,7 +63,13 @@ const Hero = () => {
             className="absolute top-0 left-0 min-h-full min-w-full object-cover"
           />
         </div>
+           <h1 className="absolute bottom-5 z-60 text-blue-75 right-5  hero-heading">G<b className="special-font">a</b>ming</h1>
       </div>
+
+      <div className="absolute top-19 left-8 z-40 size-full">
+          <h1 className="text-blue-100 hero-heading">Redefi<b className="special-font">n</b>e</h1>
+            <p className="text-blue-100 min-w-60 font-robert-regular"> Enter the Megagame<br />Unleash the Play Economy</p>
+        </div>
     </div>
   );
 };
