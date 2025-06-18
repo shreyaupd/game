@@ -1,13 +1,11 @@
-import React from 'react'
-
-function Button() {
+import "../App.css";
+function Button({ id,leftIcon,title,containerClass }) {
   return (
-   <div>
-     <div className='h-6 w-30 rounded-3xl bg-amber-200'>
-        <button className="uppercase text-[20px] ">watch trailer</button>
-    </div>
-   </div>
-  )
+    <button id={id} className={`group z-50 relative w-fit cursor-pointer overflow-hidden rounded-full px-7 py-3 ${containerClass}`} >
+       {leftIcon}
+      <span className="relative inline-flex font-general text-xs uppercase"><div>{title}</div></span>
+    </button>
+  );
 }
 
-export default Button
+export default Button; 
