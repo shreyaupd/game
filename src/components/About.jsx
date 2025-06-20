@@ -1,8 +1,11 @@
 import { useGSAP } from '@gsap/react'
+import AnimatedTitle from './AnimatedTitle'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
+
 import React from 'react'
+
 
 const About = () => {
     useGSAP(()=>{
@@ -11,7 +14,6 @@ const About = () => {
                 trigger: '#clip',
                 start: "center center",
                 end: '+=800 center',
-                markers: true,
                 duration: 5,
                 scrub: 1,
                 pin: true,
@@ -30,10 +32,7 @@ const About = () => {
            <h2 className='uppercase font-general mb-8 text-sm md:text-[20px]'>
             Welcome to zentry
            </h2>
-
-           <div className='uppercase text-4xl leading-[0.8] md:text-[6rem]'>
-            Disc<b>o</b>ver the world's<br/> l<b>a</b>rgest shared adventure
-           </div>
+            <AnimatedTitle title="Disc<b>o</b>ver the world's<br/> l<b>a</b>rgest shared adventure" containerClass= "mt-5 !text-black text-center "/>
 
            <div className="about-subtext">
             <p>
