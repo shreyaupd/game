@@ -1,30 +1,64 @@
-import { useEffect, useRef,useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import { useWindowScroll } from "react-use";
 import Button from "./Button";
+import gsap from "gsap";
 const navItems = ["Nexus", "Vault", "Prologue", "About", "contact"];
+
 const Navbar = () => {
+  const { y: CurrentY } = useWindowScroll(); 
+  const [LastY, setLastY] = useState(0);
+  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const navContainerRef = useRef(null);
   const audioElementRef = useRef(null);
 
-  const toggleAudioIndicator = () => {
-    setIsAudioPlaying((prev)=>!prev);
-    setIsIndicatorActive((prev)=>!prev);
-  };
+  useEffect(() => {
+    if (CurrentY === 0) {
+      setIsNavVisible(true);
+      navContainerRef.current.classList.remove("floating-nav")
+      navContainerRef.current.classList.add("fixed")
+    }
+    else if (CurrentY>LastY) {
+        setIsNavVisible(false);
+        navContainerRef.current.classList.add("floating-nav")
+    }  
+     else if (CurrentY<LastY) {
+        setIsNavVisible(true);
+        navContainerRef.current.classList.add("floating-nav")
+    }  
+    setLastY(CurrentY);
+   
+  }, [CurrentY]); 
 
   useEffect(()=>{
-    if(isIndicatorActive){
-      audioElementRef.current.play();
-    } else{
-      audioElementRef.current.pause(); 
+    gsap.to(navContainerRef.current,{
+      y:isNavVisible?0:-100,
+      opacity:isNavVisible?1:0,
+      duration:0.2,
+    })
+  },[isNavVisible])
+
+  const toggleAudioIndicator = () => {
+    setIsAudioPlaying(prev => !prev);
+    setIsIndicatorActive(prev => !prev);
+  };
+
+  useEffect(() => {
+    if (audioElementRef.current) {
+      if (isIndicatorActive) {
+        audioElementRef.current.play();
+      } else {
+        audioElementRef.current.pause();
+      }
     }
-  })
+  }, [isIndicatorActive]);
 
   return (
     <div
       ref={navContainerRef}
-      className="inset-x-0 h-16  fixed transition-all duration-700 top-4 z-50 sm:inset-x-6"
+      className="inset-x-0 h-16 floating-nav transition-all duration-700 top-4 z-50 sm:inset-x-6"
     >
       <header className="absolute w-full top-1/2 -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
