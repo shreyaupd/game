@@ -9,8 +9,8 @@ const About = () => {
   const containerRef = useRef();
   
   useGSAP(() => {
-    // Responsive initial sizing
-    const isMobile = window.innerWidth < 768;
+     const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
+     const isMobile = window.innerWidth < 768;
     const initialWidth = isMobile ? "60vw" : "35vw";
     const initialHeight = isMobile ? "50vh" : "80vh";
     
@@ -36,7 +36,7 @@ const About = () => {
       rotateX: 0,
       rotateY: 0,
       rotateZ: 0,
-      xPercent: isMobile ? -50 : -35,
+      xPercent: isMobile ? -50 : isTablet ? -50 : -35,
       width: "105vw",
       height: "100vh",
       ease: "power2.inOut",
