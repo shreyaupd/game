@@ -50,6 +50,12 @@ body {
   .floating-nav {
     @apply bg-black rounded-lg border;
   }
+  
+   .tilt-img {
+  transform: rotateX(11deg) rotateY(25deg) rotateZ(-7deg);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
 
   .absolute-center {
     @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
@@ -73,7 +79,7 @@ body {
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
+    @apply absolute bottom-[-104dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
   }
 
   .about-image {

@@ -1,5 +1,7 @@
 import React from 'react'
-
+const Bentocard = () => {
+  
+}
 const Feature = () => {
   return (
     <section className='bg-black pb-52'>
@@ -12,12 +14,8 @@ const Feature = () => {
             </p>
              
         </div>
+         
 
-
-
-         <div>
-            
-         </div>
     </section>
   )
 }
