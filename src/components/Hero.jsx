@@ -128,7 +128,7 @@ const Hero = () => {
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
             loop
-            // autoPlay
+            autoPlay
             muted
             id="bg-video"
             className="absolute top-0 left-0 min-h-full min-w-full object-cover z-0"
