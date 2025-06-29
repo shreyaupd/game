@@ -56,7 +56,7 @@ const Story = () => {
           <div className="story-img-container">
             <div className="story-img-mask">
               <div className="story-img-content">
-                <img src="img/entrance.webp"
+                <img src="/img/entrance.webp"
                   ref={imgref}
                   onMouseMove={handleMouseMove}
                   onMouseEnter={handleMouseLeave}

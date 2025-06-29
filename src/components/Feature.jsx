@@ -69,7 +69,7 @@ const Feature = () => {
       <div className="mt-24 w-full max-w-7xl mx-auto px-6">
         <div className='border border-gray-800 h-96 w-full overflow-hidden rounded-lg'>
           <BentoCards
-            src={'videos/feature-1.mp4'}
+            src={'/videos/feature-1.mp4'}
             title={<>radia<b>n</b>t</>}
             description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
           />
@@ -81,7 +81,7 @@ const Feature = () => {
         {/* Left tall card */}
         <div className="flex-1 border border-gray-800 h-[600px] overflow-hidden rounded-lg">
           <BentoCards
-            src="videos/feature-2.mp4"
+            src="/videos/feature-2.mp4"
             title={<>zig<b>m</b>a</>}
             description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
           />
@@ -91,7 +91,7 @@ const Feature = () => {
         <div className="flex-1 flex flex-col gap-6">
           <div className="border border-gray-800 h-[288px] overflow-hidden rounded-lg">
             <BentoCards
-              src="videos/feature-3.mp4"
+              src="/videos/feature-3.mp4"
               title={<>xe<b>n</b>on</>}
               description="Competitive esports platform with blockchain-powered tournaments."
             />
@@ -99,7 +99,7 @@ const Feature = () => {
           
           <div className="border border-gray-800 h-[288px] overflow-hidden rounded-lg">
             <BentoCards
-              src="videos/feature-4.mp4"
+              src="/videos/feature-4.mp4"
               title={<>or<b>a</b>cle</>}
               description="AI-powered game mastering tools for next-gen RPG experiences."
             />
@@ -111,14 +111,13 @@ const Feature = () => {
       <div className="mt-6 flex flex-col md:flex-row gap-6 max-w-7xl mx-auto px-6">
         <div className="flex-1 border border-gray-800 h-96 overflow-hidden rounded-lg bg-blue-800">
           <BentoCards
-            src="videos/feature-6.mp4"
             title={<> M<b>o</b>re<br/> co<b>m</b>ing<br/>  s<b>o</b><b>o</b>n.</>}
           />
         </div>
         <div className="flex-1 border border-gray-800 h-96 overflow-hidden rounded-lg">
           <BentoCards 
             id="#last"
-            src="videos/feature-5.mp4"
+            src="/videos/feature-5.mp4"
             title={<>chro<b>n</b>os</>}
             description="Time-based gameplay mechanics and persistence across all platforms."
           />
