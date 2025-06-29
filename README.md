@@ -1,7 +1,5 @@
 # Zentry Clone - GSAP Animation Showcase
 
-![Zentry Clone Preview](./public/preview.jpg)
-
 A frontend-focused clone of the Zentry gaming platform featuring rich GSAP animations and video interactions. This simplified version highlights the most visually impressive elements of the original site.
 
 ## ✨ Key Features
