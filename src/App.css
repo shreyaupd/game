@@ -39,6 +39,33 @@ body {
 }
 
 @layer utilities {
+
+  
+  /* Extended letter spacing options */
+  .tracking-tighter {
+    letter-spacing: -0.05em;
+  }
+  .tracking-tight {
+    letter-spacing: -0.025em;
+  }
+  .tracking-normal {
+    letter-spacing: 0;
+  }
+  .tracking-wide {
+    letter-spacing: 0.05em;
+  }
+  .tracking-wider {
+    letter-spacing: 0.1em;
+  }
+  .tracking-widest {
+    letter-spacing: 0.2em;
+  }
+  
+  /* For special cases */
+  .tracking-zentry {
+    letter-spacing: 0.08em;
+  
+}
   .border-hsla {
     @apply border border-white/20;
   }

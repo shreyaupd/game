@@ -1,18 +1,25 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
-const BentoCards = ({ src, title, description }) => {
+const BentoCards = ({ src, title, description, id }) => {
   const [isHovered, setIsHovered] = useState(false);
   const vidref = useRef();
 
+  useEffect(() => {
+    if (id === "#last" && vidref.current) {
+      vidref.current.play();
+      setIsHovered(true);
+    }
+  }, [id]);
+
   const handleMouseEnter = () => {
-    if (vidref.current) {
+    if (vidref.current && id !== "#last") {
       vidref.current.play();
       setIsHovered(true);
     }
   };
 
   const handleMouseLeave = () => {
-    if (vidref.current) {
+    if (vidref.current && id !== "#last") {
       vidref.current.pause();
       setIsHovered(false);
     }
@@ -109,7 +116,8 @@ const Feature = () => {
           />
         </div>
         <div className="flex-1 border border-gray-800 h-96 overflow-hidden rounded-lg">
-          <BentoCards
+          <BentoCards 
+            id="#last"
             src="/videos/feature-5.mp4"
             title={<>chro<b>n</b>os</>}
             description="Time-based gameplay mechanics and persistence across all platforms."
