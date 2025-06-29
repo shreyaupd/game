@@ -29,4 +29,4 @@ A frontend-focused clone of the Zentry gaming platform featuring rich GSAP anima
 | UI              | React Icons, Custom Components        |
 | Media Handling  | HTML5 Video                           |
 
-### Note This is a simplified clone for educational purposes only, not affiliated with the official Zentry platform.
+ Note This is a simplified clone for educational purposes only, not affiliated with the official Zentry platform.
