@@ -16,14 +16,9 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-        with:
-          node-version: '20' # or whatever version you use
 
-      - name: Clean install (fix Rollup optional deps)
-        run: |
-          rm -rf node_modules package-lock.json
-          npm cache clean --force
-          npm install --no-optional
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: npm run build
